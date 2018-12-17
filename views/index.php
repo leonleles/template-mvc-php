@@ -13,12 +13,10 @@
     <?php $this->loadViewInTemplate($viewName, $viewData); ?>
 </main>
 
-    <script src="<?= BASE_URL ?>assets/js/index.js"></script>
-
-    <!-- Carregar js assets-->
-    <?php foreach ($this->js as $js): ?>
-        <script type="text/javascript" src="<?= BASE_URL . $js ?>"></script>
-    <?php endforeach; ?>
+<!-- Carregar js assets-->
+<?php foreach ($this->js as $js): ?>
+    <script type="text/javascript" src="<?= BASE_URL . $js ?>"></script>
+<?php endforeach; ?>
 </body>
 
 </html>
