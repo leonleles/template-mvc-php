@@ -6,6 +6,7 @@
     <?php foreach ($this->css as $css): ?>
         <link rel="stylesheet" type="text/css" href="<?= BASE_URL . $css ?>">
     <?php endforeach; ?>
+    <script data-main="assets/js/main" src="<?= BASE_URL ?>assets/js/libs/require/require.js"></script>
 </head>
 
 <body>
