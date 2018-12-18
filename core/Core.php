@@ -16,7 +16,16 @@ class Core{
 		if(!empty($url) && $url != '/'){
 			$url = explode('/', $url);
 			array_shift($url);
-			
+
+			//Captura o app
+            $modulo = $url[0];
+            //Captura a classe
+            $classe = $url[1];
+
+            $m = new Manifest();
+
+            echo $m->check(["module"=> $modulo, "class"=> $classe]);
+
 			$currentController = $url[0].'Controller';
 			array_shift($url);
 

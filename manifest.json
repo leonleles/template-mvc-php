@@ -2,7 +2,10 @@
   "name": "",
   "version": "",
   "ajax": {
+
   },
-  "controllers": {
+  "app": {
+    "home": "controllers/home",
+    "teste": "controllers/teste"
   }
 }
