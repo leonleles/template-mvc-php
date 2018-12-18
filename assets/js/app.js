@@ -1,10 +1,15 @@
-// Configurando módulos para carregar a partir do diretório 'js/modules'
-// exceto para 'main', que esta em um diretório anterior
-// * com base no diretório definido no baseUrl.
-// E a mesma situação acontece com o jquery, que é carregado por CDN
-requirejs.config({
-	"baseUrl": "assets/js/",
-	paths: {
-        jquery: "libs/jquery/jquery.js"
-	}
+window.name = "NG_DEFER_BOOTSTRAP!";
+
+require.config({
+	baseUrl: "assets/js/",
+    paths: {
+        'jquery': 'libs/jquery/jquery'
+    },
+
+    // shim: {
+    //     'jquery.scroll': {
+    //         deps: ['jquery'],
+    //         exports: 'jQuery.fn.scroll'
+    //     }
+    // }
 });

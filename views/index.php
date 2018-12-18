@@ -13,7 +13,8 @@
     <?php $this->loadViewInTemplate($viewName, $viewData); ?>
 </main>
 
-<script data-main="<?= BASE_URL ?>assets/js/app" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.20/require.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.20/require.min.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>assets/js/app.js"></script>
 <!-- Carregar js assets-->
 <?php foreach ($this->js as $js): ?>
     <script type="text/javascript" src="<?= BASE_URL . $js ?>"></script>
