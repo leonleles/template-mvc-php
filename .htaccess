@@ -17,3 +17,8 @@ RewriteRule ^model/(.+)\.php$ - [F,NC]
 RewriteRule ^controllers/(.+)\.php$ - [F,NC]
 RewriteRule ^views/(.+)\.php$ - [F,NC]
 RewriteRule ^ajax/(.+)\.php$ - [F,NC]
+
+<Files ~ "(manifest.json)">
+    Order allow,deny
+    Deny from all
+</Files>
