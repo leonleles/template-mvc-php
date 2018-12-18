@@ -24,6 +24,7 @@ class Core{
 
             $m = new Manifest();
 
+            //TODO Aqui checar as estruturas
             echo $m->check(["module"=> $modulo, "class"=> $classe]);
 
 			$currentController = $url[0].'Controller';
