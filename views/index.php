@@ -10,7 +10,7 @@
 
 <body>
 <main>
-    <?php $this->loadViewInTemplate($viewName, $viewData); ?>
+    <?php $this->loadViewInTemplate($viewName); ?>
 </main>
 
 <script type="text/javascript" src="assets/js/libs/require/require.js"></script>

@@ -2,7 +2,20 @@
 
 class Core {
 
-    public function run () {
+    /**
+     * Classe de erro.
+     */
+    const CLASS_ERROR = 'notfoundController';
+    /**
+     * Método que será verificado nas classes.
+     */
+    const CURRENT_ACTION = "_construct";
+    /**
+     * Controlador que será a home do app
+     */
+    const CLASS_HOME = 'homeController';
+
+    public function run() {
 
         $url = '/';
         if (isset($_GET['url'])) {
@@ -13,9 +26,9 @@ class Core {
 
         $params = array();
 
-        $currentController = 'homeController';
-        $file = "controllers/homeController";
-        $currentAction = 'index';
+        $currentController = self::CLASS_HOME;
+        $file = "controllers/".self::CLASS_HOME;
+        $currentAction = self::CURRENT_ACTION;
 
         if (!empty($url) && $url != '/') {
             $explode = explode("/", $url);
@@ -33,7 +46,7 @@ class Core {
                     $currentAction = $m->getRout();
                     array_shift($url);
                 } else {
-                    $currentAction = 'index';
+                    $currentAction = self::CURRENT_ACTION;
                 }
 
                 if ($url > 0) {
@@ -41,15 +54,15 @@ class Core {
                 }
             } else {
                 if (isset($explode[2]) && $explode[2] != "") {
-                    $currentController = 'notfoundController';
-                    $currentAction = 'index';
+                    $currentController = self::CLASS_ERROR;
+                    $currentAction = self::CURRENT_ACTION;
                 }
             }
         }
 
         if (!file_exists($file . '.class.php') || !method_exists($currentController, $currentAction)) {
-            $currentController = 'notfoundController';
-            $currentAction = 'index';
+            $currentController = self::CLASS_ERROR;
+            $currentAction = self::CURRENT_ACTION;
         }
 
         $c = new $currentController();
@@ -57,7 +70,7 @@ class Core {
         call_user_func_array(array($c, $currentAction), $params);
     }
 
-    public function checkRoutes ($url) {
+    public function checkRoutes($url) {
         global $routes;
 
         foreach ($routes as $pt => $newurl) {

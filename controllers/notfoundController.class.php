@@ -2,8 +2,10 @@
 
 class notfoundController extends Controller{
 
-	public function index(){
-		$this->loadTemplate('notfound', array());
+    const VIEW = 'notfound';
+
+	public function _construct(){
+		$this->loadTemplate(self::VIEW);
 	}
 
 }

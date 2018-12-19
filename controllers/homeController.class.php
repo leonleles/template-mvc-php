@@ -2,11 +2,15 @@
 
 class homeController extends Controller{
 
-	public function index(){
+    const VIEW = 'home';
 
+	public function _construct(){
 
         $this->setJs('assets/js/app/home.js');
-		$this->loadTemplate('home', array());
+
+        $this->set("teste", ["asdasd", "assdasdsad", "dffgfgfdg"]);
+
+		$this->loadTemplate(self::VIEW);
 	}
 
 }

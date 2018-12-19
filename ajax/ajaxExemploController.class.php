@@ -3,7 +3,7 @@
 class ajaxExemploController extends Ajax {
 
 
-    public function index () {
+    public function _construct () {
         $acao = "";
 
         if (isset($_POST['acao'])) {

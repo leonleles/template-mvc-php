@@ -1,1 +1,1 @@
-home
+<?php print_r($teste) ?>
