@@ -7,11 +7,12 @@ define('teste', function () {
         };
 
         this.laco = () => {
-            return 1;
+            for (let i = 1; i <= 10; i++) {
+                console.log(`Testando ${i}`);
+            }
         };
 
         this.__construct();
 
     };
-
 });
