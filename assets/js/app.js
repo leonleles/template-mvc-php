@@ -7,7 +7,7 @@ require.config({
         'teste': 'componentes/teste'
     }
 
-    // shim: {
+    // ,shim: {
     //     'jquery.scroll': {
     //         deps: ['jquery'],
     //         exports: 'jQuery.fn.scroll'
