@@ -1,6 +1,6 @@
 <?php
 
-class exemploController extends Controller {
+class Exemplo extends Controller {
 
     public function index() {
         $dados = array();
@@ -9,6 +9,6 @@ class exemploController extends Controller {
         $this->setJs('assets/js/clienteedit.js');
 
         //Nome da view
-        $this->loadTemplate('clienteedit', $dados);
+        $this->loadTemplate('exemplo', $dados);
     }
 }

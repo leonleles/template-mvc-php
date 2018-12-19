@@ -4,7 +4,7 @@ require.config({
 	baseUrl: "assets/js/",
     paths: {
         'jquery': 'libs/jquery/jquery'
-    },
+    }
 
     // shim: {
     //     'jquery.scroll': {
