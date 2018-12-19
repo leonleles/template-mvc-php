@@ -1,1 +1,0 @@
-<?= "Permissão negada :(" ?>

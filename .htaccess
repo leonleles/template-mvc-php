@@ -13,7 +13,7 @@ RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
 
 #Bloqueia os arquivos internos
 RewriteRule ^core/(.+)\.php$ - [F,NC]
-RewriteRule ^model/(.+)\.php$ - [F,NC]
+RewriteRule ^models/(.+)\.php$ - [F,NC]
 RewriteRule ^controllers/(.+)\.php$ - [F,NC]
 RewriteRule ^views/(.+)\.php$ - [F,NC]
 RewriteRule ^ajax/(.+)\.php$ - [F,NC]
