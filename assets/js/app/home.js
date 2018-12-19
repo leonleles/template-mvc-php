@@ -1,6 +1,12 @@
-require(['jquery', 'teste'], function ($, t) {
+require(['jquery', 'ajax'], function ($, ajax) {
     'use strict';
 
-        let a = new t("asdasd");
-        // a.laco();
+    var a = new ajax();
+
+    a.set("ajax","teste", {nome: 'leonardo'},function (res) {
+        console.log(res);
+    });
+
+    a.execute();
+
 });
