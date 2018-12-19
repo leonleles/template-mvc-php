@@ -1,9 +1,10 @@
 define('teste', function () {
 
-    return function () {
+    return function (a) {
+
+        console.log(a);
 
         this.__construct = function () {
-
         };
 
         this.laco = () => {
